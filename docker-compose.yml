@@ -52,4 +52,8 @@ volumes:
 
 networks:
   front-tier:
+       name: vote
+       name: redis
   back-tier:
+      name: result
+      name: dp
