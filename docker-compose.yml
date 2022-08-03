@@ -29,6 +29,7 @@ services:
       context: ./worker
     networks:
       - back-tier
+      -front-tier
 
   redis:
     image: redis:5.0-alpine3.10
