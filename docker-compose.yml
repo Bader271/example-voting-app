@@ -29,6 +29,7 @@ services:
       context: ./worker
     networks:
       - back-tier
+      - front-tier
     
 
   redis:
@@ -54,6 +55,8 @@ networks:
   front-tier:
        name: vote
        name: redis
+       name: worker
   back-tier:
       name: result
       name: dp
+      name: worker
