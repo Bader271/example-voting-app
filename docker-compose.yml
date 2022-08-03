@@ -27,14 +27,9 @@ services:
   worker:
     build:
       context: ./worker
-      depends_on:
-      redis: # The worker service depends on redis and DB health status
-        condition: service_healthy  
-      db:
-        condition: service_healthy 
     networks:
       - back-tier
-      - front-tier
+    
 
   redis:
     image: redis:5.0-alpine3.10
